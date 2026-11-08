@@ -1,0 +1,107 @@
+.card {
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+.dark .card {
+  border-color: #1e293b;
+  background: #0f172a;
+}
+a.card:hover {
+  transform: translateY(-4px);
+}
+.btn {
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, #10b981, #0ea5e9);
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.02);
+}
+.field {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  outline: none;
+}
+.field:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4);
+}
+.dark .field {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+.field:disabled {
+  opacity: 0.5;
+}
+
+html[data-theme="black"] {
+  --bg: #020617;
+  --card: #0f172a;
+  --fg: #f1f5f9;
+  --head: linear-gradient(90deg, #020617, #064e3b, #0c4a6e);
+}
+html[data-theme="white"] {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --fg: #0f172a;
+  --head: linear-gradient(90deg, #0f766e, #10b981, #0ea5e9);
+}
+html[data-theme="green"] {
+  --bg: #022c22;
+  --card: #064e3b;
+  --fg: #ecfdf5;
+  --head: linear-gradient(90deg, #022c22, #059669, #34d399);
+}
+html[data-theme="blue"] {
+  --bg: #082f49;
+  --card: #0c4a6e;
+  --fg: #f0f9ff;
+  --head: linear-gradient(90deg, #082f49, #0369a1, #38bdf8);
+}
+body.themed {
+  background: var(--bg) !important;
+  color: var(--fg) !important;
+}
+body.themed .card,
+body.themed #drawer,
+body.themed #map,
+.dark body.themed tbody tr {
+  background: var(--card) !important;
+  color: var(--fg);
+}
+body.themed .app-header,
+body.themed .hero {
+  background: var(--head) !important;
+}
+body.themed .field {
+  background: var(--card) !important;
+  color: var(--fg);
+}
+.theme-btn {
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+html[data-theme="black"] [data-t="black"],
+html[data-theme="white"] [data-t="white"],
+html[data-theme="green"] [data-t="green"],
+html[data-theme="blue"] [data-t="blue"] {
+  border-color: #fff;
+  outline: 2px solid #10b981;
+}

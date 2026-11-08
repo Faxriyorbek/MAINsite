@@ -1,0 +1,63 @@
+{
+  "routes": {
+    "1": "1-yo'nalish: Markaz → Turon maktabi",
+    "2": "2-yo'nalish: Yaypan → Turon maktabi",
+    "3": "3-yo'nalish: Obod mahalla → Turon maktabi"
+  },
+  "students": [
+    {
+      "name": "Aziz Karimov",
+      "yonalish": 1,
+      "password": "142342",
+      "sinf": "9-A blok"
+    },
+    {
+      "name": "Malika Rahimova",
+      "yonalish": 1,
+      "password": "205871",
+      "sinf": "8-B blok"
+    },
+    {
+      "name": "G'aniyev Faxriyorbek",
+      "yonalish": 1,
+      "password": "331920",
+      "sinf": "10-A blok"
+    },
+    {
+      "name": "Dilnoza Yusupova",
+      "yonalish": 2,
+      "password": "458213",
+      "sinf": "7-A blok"
+    },
+    {
+      "name": "Sardor Aliyev",
+      "yonalish": 2,
+      "password": "512097",
+      "sinf": "9-B blok"
+    },
+    {
+      "name": "Madina Orifova",
+      "yonalish": 2,
+      "password": "623744",
+      "sinf": "11-A blok"
+    },
+    {
+      "name": "Bobur Hasanov",
+      "yonalish": 3,
+      "password": "774105",
+      "sinf": "8-A blok"
+    },
+    {
+      "name": "Zilola Nazarova",
+      "yonalish": 3,
+      "password": "889632",
+      "sinf": "10-B blok"
+    },
+    {
+      "name": "Otabek Qodirov",
+      "yonalish": 3,
+      "password": "906318",
+      "sinf": "6-A blok"
+    }
+  ]
+}

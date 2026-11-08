@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uz" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TURON.go — Ro'yhatdan o'tish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tw.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body
+    class="flex min-h-screen items-center justify-center bg-gradient-to-br from-black via-emerald-950 to-sky-900 p-4 text-slate-100"
+  >
+    <main
+      class="w-full max-w-md rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-2xl backdrop-blur"
+    >
+      <h1 class="text-center text-4xl font-extrabold">
+        TURON<span class="text-emerald-400">.go</span>
+      </h1>
+      <p class="mb-8 mt-2 text-center text-sky-200">
+        Turon Obod Ilm avtobus yo'nalishlari
+      </p>
+
+      <label class="mb-1 block text-sm text-slate-300">Yo'nalish</label>
+      <select id="route" class="field mb-4 text-slate-100">
+        <option value="">Yo'nalishni tanlang</option>
+        <option value="1">1-yo'nalish</option>
+        <option value="2">2-yo'nalish</option>
+        <option value="3">3-yo'nalish</option>
+      </select>
+
+      <label class="mb-1 block text-sm text-slate-300">Ism familiya</label>
+      <select id="name" class="field mb-4 text-slate-100" disabled>
+        <option value="">Avval yo'nalishni tanlang</option>
+      </select>
+
+      <label class="mb-1 block text-sm text-slate-300">Parol</label>
+      <input
+        id="pass"
+        type="password"
+        placeholder="Parolni kiriting"
+        class="field mb-2 text-slate-100"
+        disabled
+      />
+      <p id="err" class="mb-4 h-5 text-sm text-red-400"></p>
+
+      <button id="go" class="btn w-full">Kirish</button>
+    </main>
+    <script src="../app.js"></script>
+    <script src="registrate.js"></script>
+  </body>
+</html>

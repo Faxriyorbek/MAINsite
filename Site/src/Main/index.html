@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TURON.go — Bosh sahifa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tw.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <div id="shell"></div>
+    <main class="mx-auto max-w-6xl px-6">
+      <section
+        class="hero mt-8 rounded-3xl bg-gradient-to-br from-black via-emerald-800 to-sky-600 p-10 text-white shadow-2xl"
+      >
+        <p class="text-sky-100">Xush kelibsiz,</p>
+        <h1 id="hello" class="text-4xl font-extrabold md:text-5xl"></h1>
+        <p
+          id="myRoute"
+          class="mt-4 inline-block rounded-full bg-white/20 px-4 py-2 font-medium"
+        ></p>
+      </section>
+
+      <h2 class="mb-4 mt-12 text-2xl font-bold">Yo'nalishlar</h2>
+      <div id="routes" class="grid gap-5 md:grid-cols-3"></div>
+
+      <h2 class="mb-4 mt-12 text-2xl font-bold">Bo'limlar</h2>
+      <div id="links" class="grid grid-cols-2 gap-5 md:grid-cols-5"></div>
+
+      <h2 class="mb-4 mt-12 text-2xl font-bold">Xarita</h2>
+      <div
+        id="map"
+        class="flex h-96 items-center justify-center rounded-3xl border-2 border-dashed border-emerald-500/50 bg-slate-100 text-slate-400 dark:bg-slate-900"
+      >
+        <!-- Xarita shu yerga qo'yiladi -->
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="../app.js"></script>
+    <script>
+      renderShell("index.html");
+      const u = getUser();
+      document.getElementById("hello").textContent = u.name;
+      document.getElementById("myRoute").textContent =
+        "🚌 " + ROUTES[u.yonalish];
+      document.getElementById("routes").innerHTML = Object.entries(ROUTES)
+        .map(
+          ([n, t]) => `
+      <div class="card ${Number(n) === u.yonalish ? "ring-2 ring-emerald-500" : ""}">
+        <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-sky-500 text-xl font-bold text-white">${n}</div>
+        <p class="font-semibold">${t}</p>
+        ${Number(n) === u.yonalish ? '<p class="mt-2 text-sm text-emerald-500">Sizning yo\'nalishingiz</p>' : ""}
+      </div>`,
+        )
+        .join("");
+      document.getElementById("links").innerHTML = PAGES.slice(1, 6)
+        .map(
+          ([h, ic, t]) =>
+            `<a href="${h}" class="card text-center"><div class="text-4xl">${ic}</div><p class="mt-2 font-semibold">${t}</p></a>`,
+        )
+        .join("");
+    </script>
+  </body>
+</html>

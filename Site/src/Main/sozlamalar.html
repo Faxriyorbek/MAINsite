@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TURON.go — Sozlamalar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tw.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <div id="shell"></div>
+    <main class="mx-auto max-w-2xl px-6">
+      <h1 class="mb-6 mt-8 text-3xl font-extrabold">Sozlamalar</h1>
+      <div class="card space-y-6">
+        <div>
+          <p class="mb-3 font-semibold">Sayt rangi</p>
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <button
+              data-t="black"
+              class="theme-btn"
+              style="background: #020617"
+            >
+              Qora
+            </button>
+            <button
+              data-t="white"
+              class="theme-btn"
+              style="background: #fff; color: #0f172a; border-color: #cbd5e1"
+            >
+              Oq
+            </button>
+            <button
+              data-t="green"
+              class="theme-btn"
+              style="background: #059669"
+            >
+              Yashil
+            </button>
+            <button data-t="blue" class="theme-btn" style="background: #0284c7">
+              Ko'k
+            </button>
+          </div>
+        </div>
+        <div>
+          <p class="mb-2 font-semibold">
+            Matn o'lchami: <span id="fv"></span>px
+          </p>
+          <input
+            id="font"
+            type="range"
+            min="14"
+            max="22"
+            class="w-full accent-emerald-500"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-semibold">Bildirishnomalar</p>
+            <p class="text-sm text-slate-500">Avtobus haqida xabarlar</p>
+          </div>
+          <input
+            id="notif"
+            type="checkbox"
+            class="h-6 w-6 accent-emerald-500"
+          />
+        </div>
+        <button
+          id="out"
+          class="w-full rounded-xl border border-red-500 py-3 font-bold text-red-500 hover:bg-red-500/10"
+        >
+          EXIT — Chiqish
+        </button>
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="../app.js"></script>
+    <script src="sozlamalar.js"></script>
+  </body>
+</html>

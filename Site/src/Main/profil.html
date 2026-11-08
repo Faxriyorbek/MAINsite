@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TURON.go — Profil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tw.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
+  >
+    <div id="shell"></div>
+    <main class="mx-auto max-w-2xl px-6">
+      <h1 class="mb-6 mt-8 text-3xl font-extrabold">Profil</h1>
+      <div class="card space-y-5">
+        <div>
+          <p class="text-sm text-slate-500">Ism familiya</p>
+          <p id="pName" class="text-lg font-semibold"></p>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500">Sinf</p>
+          <p id="pSinf" class="text-lg font-semibold"></p>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500">Parol</p>
+          <div class="flex items-center gap-3">
+            <p id="pPass" class="text-lg font-semibold tracking-widest">
+              ••••••
+            </p>
+            <button
+              id="eye"
+              class="rounded-lg px-3 py-1 text-sm text-emerald-500 hover:bg-emerald-500/10"
+            >
+              Ko'rsatish
+            </button>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 text-sm text-slate-500">
+            Yo'nalish (o'zgartirish mumkin)
+          </p>
+          <select id="pRoute" class="field">
+            <option value="1">1-yo'nalish</option>
+            <option value="2">2-yo'nalish</option>
+            <option value="3">3-yo'nalish</option>
+          </select>
+          <p id="saved" class="mt-2 h-5 text-sm text-emerald-500"></p>
+        </div>
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="../app.js"></script>
+    <script src="profil.js"></script>
+  </body>
+</html>
